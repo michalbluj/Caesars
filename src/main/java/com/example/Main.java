@@ -48,6 +48,11 @@ public class Main {
     SpringApplication.run(Main.class, args);
   }
 
+  @RequestMapping("/mainPage")
+  String mainPage() {
+    return "index";
+  }
+
   @RequestMapping("/")
   String index() {
     return "index";
