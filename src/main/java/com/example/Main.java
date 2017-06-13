@@ -49,7 +49,7 @@ public class Main {
     SpringApplication.run(Main.class, args);
   }
 
-  @RequestMapping("/rest/callJava",method=RequestMethod.GET)
+  @RequestMapping(value = "/rest/callJava", method = RequestMethod.GET)
   public String callJava(){
     return "message from Java application";
   }
