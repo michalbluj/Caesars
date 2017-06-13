@@ -25,7 +25,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -34,6 +33,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Map;
+
+import java.io.*;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.StreamingOutput;
+
+import com.sun.jersey.core.header.FormDataContentDisposition;
 
 @Controller
 @SpringBootApplication
@@ -49,7 +56,10 @@ public class Main {
     SpringApplication.run(Main.class, args);
   }
 
-  @RequestMapping(value = "/rest/callJava", method = RequestMethod.GET)
+  //@RequestMapping(value = "/rest/callJava", method = RequestMethod.GET)
+  @GET
+  @Path("/rest/callJava")
+  @Produces("text/plain")
   public String callJava(){
     return "message from Java application";
   }
