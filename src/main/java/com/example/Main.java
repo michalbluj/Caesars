@@ -25,6 +25,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -48,8 +49,8 @@ public class Main {
     SpringApplication.run(Main.class, args);
   }
 
-  @RequestMapping("/callJava",method=RequestMethod.GET)
-  String callJava(){
+  @RequestMapping("/rest/callJava",method=RequestMethod.GET)
+  public String callJava(){
     return "message from Java application";
   }
 
