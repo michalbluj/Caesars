@@ -57,12 +57,6 @@ public class Main {
   }
 
   //@RequestMapping(value = "/rest/callJava", method = RequestMethod.GET)
-  @GET
-  @Path("/rest/callJava")
-  @Produces("text/plain")
-  public String callJava(){
-    return "message from Java application";
-  }
 
   @RequestMapping("/mainPage")
   String mainPage() {
