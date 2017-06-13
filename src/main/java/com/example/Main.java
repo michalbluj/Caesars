@@ -48,6 +48,11 @@ public class Main {
     SpringApplication.run(Main.class, args);
   }
 
+  @RequestMapping("/callJava")
+  String callJava(){
+    return "message from Java application";
+  }
+
   @RequestMapping("/mainPage")
   String mainPage() {
     return "index";
