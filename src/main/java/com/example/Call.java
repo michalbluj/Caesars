@@ -1,22 +1,20 @@
 
 package com.example;
 
-import java.io.*;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.StreamingOutput;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.SecurityContext;
 
-import com.sun.jersey.core.header.FormDataContentDisposition;
-
-@Path("/rest")
+@Path("/hello")
 public class Call {
 
     @GET
-    @Path("/callJava")
     @Produces("text/plain")
-    public String callJava(){
-        return "message from Java application";
+    public String handleGreeting() {
+        return "Hello World";
     }
 
 }
