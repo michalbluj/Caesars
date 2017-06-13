@@ -48,7 +48,7 @@ public class Main {
     SpringApplication.run(Main.class, args);
   }
 
-  @RequestMapping("/callJava")
+  @RequestMapping("/callJava",method=RequestMethod.GET)
   String callJava(){
     return "message from Java application";
   }
