@@ -1,5 +1,5 @@
 
-package com.example;
+package resources;
 
 
 import javax.ws.rs.GET;
