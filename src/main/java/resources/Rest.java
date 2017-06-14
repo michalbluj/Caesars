@@ -3,8 +3,7 @@ package resources;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.SecurityContext;
+import resources.model.Timer;
 
 @Path("/rest")
 public class Rest {
@@ -20,7 +19,7 @@ public class Rest {
     @Produces("text/plain")
     @Path("/time")
     public String handleTime() {
-        return String.valueOf(System.currentTimeMillis());
+        return new Timer().getCurrentTime();
     }
 
 }
