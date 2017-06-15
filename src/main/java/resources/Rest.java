@@ -4,8 +4,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-import resources.model.Timer;
-
 @Path("/rest")
 public class Rest {
 

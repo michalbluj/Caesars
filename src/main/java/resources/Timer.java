@@ -1,4 +1,4 @@
-package resources.model;
+package resources;
 
 public class Timer {
 
